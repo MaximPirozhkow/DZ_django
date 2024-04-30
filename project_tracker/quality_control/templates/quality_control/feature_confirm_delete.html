@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+    <h1>Удаление запроса</h1>
+    <p>Вы уверены, что хотите удалить запрос "{{ project.name }}"?</p>
+
+    <form action="{% url 'tasks:delete_feature' feature.id %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Удалить">
+        <a href="{% url 'tasks:feature_detail' bug.id %}">Отмена</a>
+    </form>
+{% endblock %}
