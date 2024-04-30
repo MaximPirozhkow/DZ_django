@@ -88,3 +88,7 @@ class TaskDetailView(DetailView):
         task = self.get_object()
         response_html = f'<h1>{task.name}</h1><p>{task.description}</p>'
         return HttpResponse(response_html)
+
+
+from django.views import View
+
