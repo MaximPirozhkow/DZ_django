@@ -1,10 +1,10 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
-    <h2>Добавить отчет об ошибке</h2>
+<h2>Изменение отчета об ошибке: {{ bug.title }}</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit"> Создать отчет об ошибке</button>
+        <button type="submit">Сохранить</button>
     </form>
 {% endblock %}

@@ -2,13 +2,16 @@
 
 {% block content %}
 
-    <h1>Описание</h1>
-    <h1>{{ bugreport.title }}</h1>
-    <p>{{ bugreport.description }}</p>
-    <p>{{ bugreport.status }}</p>
-    <p>{{ bugreport.priority }}</p>
-    <p>{{ bugreport.project }}</p>
-    <p>{{ bugreport.task}}</p>
+<p><a href="{% url 'quality_control:update_bug' bugreport.id %}">Изменить отчет об ошибке</a></p>
+<p><a href="{% url 'quality_control:delete_bug' bugreport.id %}"onclick="return confirm('Вы уверены, что хотите удалить этот отчет об ошибке?');">Удалить отчет об ошибке</a></p>
+
+    <h1>Описание отчета об ошибке</h1>
+    <h1><b>Назавние </b>{{ bugreport.title }}</h1>
+    <p><b>Описание </b>{{ bugreport.description }}</p>
+    <p><b>Статус </b>{{ bugreport.status }}</p>
+    <p><b>Приоритет </b>{{ bugreport.priority }}</p>
+    <p><b>Проект </b>{{ bugreport.project }}</p>
+    <p><b>Задание </b>{{ bugreport.task}}</p>
 
 
 {% endblock %}

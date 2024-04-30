@@ -2,9 +2,9 @@
 
 {% block content %}
     <!-- Ссылка для добавления новой задачи -->
-    <p><a href="{% url 'quality_control:add_bug'  %}">Добавить новый баг</a></p>
+    <p><a href="{% url 'quality_control:add_bug'  %}">Добавить новый отчет об ошибке</a></p>
 
-    <h1>Список багов</h1>
+    <h1>Список отчетов об ошибках</h1>
     <ul>
         {% for bug in bug_list %}
             <li><a href="{% url 'quality_control:bugs_id' bug.id %}"> {{bug.title}}  </a></li>
